@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-08-03T10:49:42.862Z",
+    "end": "2021-08-03T10:49:51.382Z",
+    "duration": 8520,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "56007b47-94ee-4e90-bbf8-2763802ab68a",
+      "title": "",
+      "fullFile": "cypress/integration/com.techproed/day02_suggested_element.js",
+      "file": "cypress/integration/com.techproed/day02_suggested_element.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b648ba31-1874-41f6-8d73-c704a44e3f36",
+          "title": "suggested elements",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "suggested elements",
+              "fullTitle": "suggested elements suggested elements",
+              "timedOut": null,
+              "duration": 6246,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//cy.get (\".gLFyf\").type('USA')\ncy.visit(\"https://www.google.com/\");\ncy.get(\"input[name='q']\").type('usa');\ncy.wait(3000);\ncy.get('li span b') //getting the list of bold items ==> why this IT IS MORE DYNAMIC ==> instead of einrise i can write other options corona,etc..\n.contains('corona') //choosing the one that contains map ==> teacher\"s is map mine is einrise\n.click(); //then clicking on it\n//selectable things suggests(teacher's searching,not mine)\n/*li span b :\nmap\na login\njobs\ntoday\na customer service\n*/",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4000ms: `cy.type()` failed because this element:\n\n`<input class=\"gLFyf gsfi\" jsaction=\"paste:puy29d;\" maxlength=\"2048\" name=\"q\" type=\"text\" aria-autocomplete=\"both\" aria-haspopup=\"false\" autocapitalize=\"off\" autocomplete=\"off\" autocorrect=\"off\" autofocus=\"\" role=\"combobox\" spellcheck=\"false\" title=\"Suche\" value=\"\" aria-label=\"Suche\" data-ved=\"0ahUKEwic0bOO15TyAhU2EWMBHdsADMgQ39UDCAY\">`\n\nis being covered by another element:\n\n`<li class=\"gowsYd ibCF0c\">Dienste...</li>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 4000ms: `cy.type()` failed because this element:\n\n`<input class=\"gLFyf gsfi\" jsaction=\"paste:puy29d;\" maxlength=\"2048\" name=\"q\" type=\"text\" aria-autocomplete=\"both\" aria-haspopup=\"false\" autocapitalize=\"off\" autocomplete=\"off\" autocorrect=\"off\" autofocus=\"\" role=\"combobox\" spellcheck=\"false\" title=\"Suche\" value=\"\" aria-label=\"Suche\" data-ved=\"0ahUKEwic0bOO15TyAhU2EWMBHdsADMgQ39UDCAY\">`\n\nis being covered by another element:\n\n`<li class=\"gowsYd ibCF0c\">Dienste...</li>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at $Cy.ensureDescendents (https://www.google.com/__cypress/runner/cypress_runner.js:147064:26)\n    at ensureDescendents (https://www.google.com/__cypress/runner/cypress_runner.js:135244:8)\n    at ensureDescendentsAndScroll (https://www.google.com/__cypress/runner/cypress_runner.js:135251:14)\n    at ensureElIsNotCovered (https://www.google.com/__cypress/runner/cypress_runner.js:135385:5)\n    at runAllChecks (https://www.google.com/__cypress/runner/cypress_runner.js:135572:52)\n    at retryActionability (https://www.google.com/__cypress/runner/cypress_runner.js:135595:16)\n    at tryCatcher (https://www.google.com/__cypress/runner/cypress_runner.js:13211:23)\n    at Function.Promise.attempt.Promise.try (https://www.google.com/__cypress/runner/cypress_runner.js:10485:29)\n    at tryFn (https://www.google.com/__cypress/runner/cypress_runner.js:151739:21)\n    at whenStable (https://www.google.com/__cypress/runner/cypress_runner.js:151777:12)\n    at https://www.google.com/__cypress/runner/cypress_runner.js:151269:16\n    at tryCatcher (https://www.google.com/__cypress/runner/cypress_runner.js:13211:23)\n    at Promise._settlePromiseFromHandler (https://www.google.com/__cypress/runner/cypress_runner.js:11146:31)\n    at Promise._settlePromise (https://www.google.com/__cypress/runner/cypress_runner.js:11203:18)\n    at Promise._settlePromise0 (https://www.google.com/__cypress/runner/cypress_runner.js:11248:10)\n    at Promise._settlePromises (https://www.google.com/__cypress/runner/cypress_runner.js:11328:18)\nFrom Your Spec Code:\n    at Context.eval (https://www.google.com/__cypress/tests?p=cypress\\integration\\com.techproed\\day02_suggested_element.js:103:31)",
+                "diff": null
+              },
+              "uuid": "591506ba-05e4-45a1-8fcd-052bed6bc815",
+              "parentUUID": "b648ba31-1874-41f6-8d73-c704a44e3f36",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "591506ba-05e4-45a1-8fcd-052bed6bc815"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 6246,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

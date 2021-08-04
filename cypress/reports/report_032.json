@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-02T18:41:30.774Z",
+    "end": "2021-08-02T18:41:36.276Z",
+    "duration": 5502,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c8dea390-d19c-4a30-a8c5-8de51fa87fe6",
+      "title": "",
+      "fullFile": "cypress/integration/com.techproed/day03_drag_and_drop.js",
+      "file": "cypress/integration/com.techproed/day03_drag_and_drop.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d810ae89-bd56-4e21-b801-2d2ef735e5d0",
+          "title": "drag and drop",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "drag and drop",
+              "fullTitle": "drag and drop drag and drop",
+              "timedOut": null,
+              "duration": 1738,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "/*DRAG AND DROP:\n1. RUN ON TERMINAL : npm install --save-dev @4tw/cypress-drag-drop\n2. import '@4tw/cypress-drag-drop on the top of the class\n(automatically it was added to package.json , like iframe)\n*/\ncy.visit('https://www.testandquiz.com/selenium/testing.html'); //dragging #sourceImage over #targetDiv\ncy.get('#sourceImage') //source\n.drag('#targetDiv'); //target",
+              "err": {},
+              "uuid": "ab2ba556-4344-4942-83f7-4c55de6f5c47",
+              "parentUUID": "d810ae89-bd56-4e21-b801-2d2ef735e5d0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ab2ba556-4344-4942-83f7-4c55de6f5c47"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1738,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

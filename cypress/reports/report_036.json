@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-02T18:42:13.781Z",
+    "end": "2021-08-02T18:42:19.598Z",
+    "duration": 5817,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9371cdf8-0529-4ae1-9c0b-f5de9b0ae781",
+      "title": "",
+      "fullFile": "cypress/integration/com.techproed/day04_file_upload.js",
+      "file": "cypress/integration/com.techproed/day04_file_upload.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "12df9357-31cc-4e56-9df7-fe8d4737bd19",
+          "title": "File Upload",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "override file name",
+              "fullTitle": "File Upload override file name",
+              "timedOut": null,
+              "duration": 3192,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://davidwalsh.name/demo/multiple-file-upload.php'); //path of all images\nconst path1 = 'image1.jpeg'; //Overriding original file name:\n//.attachFile({ filePath: 'FILE PATH', fileName: 'FILE NAME' });\ncy.get('#filesToUpload').attachFile({\n  filePath: path1,\n  fileName: 'customFileName.json'\n}); //Assertion\ncy.get(':nth-child(6) > strong').should('contain.text', 'Files You Selected:');",
+              "err": {},
+              "uuid": "2b03ec3a-3531-4265-8856-e50adafaf426",
+              "parentUUID": "12df9357-31cc-4e56-9df7-fe8d4737bd19",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2b03ec3a-3531-4265-8856-e50adafaf426"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3192,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

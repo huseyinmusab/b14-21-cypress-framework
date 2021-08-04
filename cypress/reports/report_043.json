@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-03T10:47:31.563Z",
+    "end": "2021-08-03T10:47:40.890Z",
+    "duration": 9327,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a6e0309d-327a-4298-8051-3bbfe5c5b9ad",
+      "title": "",
+      "fullFile": "cypress/integration/com.techproed/day02_alerts.js",
+      "file": "cypress/integration/com.techproed/day02_alerts.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c7a9b57f-e68e-47ad-830a-291258784863",
+          "title": "alerts",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "entering text on the alert",
+              "fullTitle": "alerts entering text on the alert",
+              "timedOut": null,
+              "duration": 6405,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "/*\nCypress automatically accepts alert when you click on alert button\nWe will use window()\n */\ncy.visit('https://the-internet.herokuapp.com/javascript_alerts'); //Controll the promtp\n//type Hi\n//click Ok\ncy.window() //to controll the pop up window\n.then($windowElement => {\n  //$windowElement represent the window popup element\n  cy.stub($windowElement, 'prompt') //\n  .returns('Hi'); //Entering Hi in the prompt\n  cy.wait(3000); //Click on the 3rd alert\n  cy.get(':nth-child(3) > button').click(); //After I enter Hi in the prompt, I click on the alert\n}); //Asserting the result\ncy.get('#result').should('have.text', 'You entered: Hi');",
+              "err": {},
+              "uuid": "e7da698d-39d1-4671-a83f-ba1aeab7a64b",
+              "parentUUID": "c7a9b57f-e68e-47ad-830a-291258784863",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e7da698d-39d1-4671-a83f-ba1aeab7a64b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6405,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

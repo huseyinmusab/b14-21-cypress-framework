@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-02T18:41:58.375Z",
+    "end": "2021-08-02T18:42:10.754Z",
+    "duration": 12379,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bacdd959-ccaf-4203-b4e6-6e6a347c56ac",
+      "title": "",
+      "fullFile": "cypress/integration/com.techproed/day04_custom_search.js",
+      "file": "cypress/integration/com.techproed/day04_custom_search.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ec91463b-1ce9-412f-9eba-a2a22c219016",
+          "title": "Search",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "amazonSearch",
+              "fullTitle": "Search amazonSearch",
+              "timedOut": null,
+              "duration": 9495,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.amazonSearch('teapot');\ncy.get('.a-color-state').should('have.text', '\"teapot\"');\ncy.title().should('include', 'teapot'); //cy.screenshot()   ===> automatically a screenshot folder is created and yoyu can also see in framework or in a folder",
+              "err": {},
+              "uuid": "16ac6380-21b6-4b4e-a2b8-ce8d70cfb260",
+              "parentUUID": "ec91463b-1ce9-412f-9eba-a2a22c219016",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "16ac6380-21b6-4b4e-a2b8-ce8d70cfb260"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9495,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

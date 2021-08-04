@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-02T18:39:23.609Z",
+    "end": "2021-08-02T18:39:51.171Z",
+    "duration": 27562,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a79ee50a-2186-41e2-b3de-9b004fed8870",
+      "title": "",
+      "fullFile": "cypress/integration/com.techproed/day02_basic_navigations.js",
+      "file": "cypress/integration/com.techproed/day02_basic_navigations.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7b278e73-099d-452d-925b-16372458aa35",
+          "title": "navigations",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "back,forward,refresh",
+              "fullTitle": "navigations back,forward,refresh",
+              "timedOut": null,
+              "duration": 20918,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://qa-environment.crystalkeyhotels.com/'); //hard wait\ncy.wait(3000); //clicking on the log in Button\ncy.contains('Log in').click();\ncy.wait(3000); //Going back to the previous page\n//cy.go('back') ==== cy.go(-1)\n//OR\ncy.go(-1);\ncy.wait(3000); //Going to the next page\n//cy.go('forward') ===== cy.go(1)\ncy.go(1); //Refresh the page by using reload()\ncy.reload();",
+              "err": {},
+              "uuid": "87b0185b-0448-4a2d-a325-0d4e8f324467",
+              "parentUUID": "7b278e73-099d-452d-925b-16372458aa35",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "chaining the navigations",
+              "fullTitle": "navigations chaining the navigations",
+              "timedOut": null,
+              "duration": 4731,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//WE CAN CHAIN THE FUNCTIONS\ncy.visit('https://qa-environment.crystalkeyhotels.com/'); //Chaining the methods\ncy.contains('Log in').click().go('back').go('forward').go('back'); //Forcing to reload.Not ethat we do not need to force here\n//And verify the Log in link visible on the page\ncy.reload(true) //true means force\n.contains('Log in') //getting the Log in element\n.should('be.visible'); //asserting if the element is visible",
+              "err": {},
+              "uuid": "ce018050-4cf2-4ca0-b3bc-bdfeb2ddece7",
+              "parentUUID": "7b278e73-099d-452d-925b-16372458aa35",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "87b0185b-0448-4a2d-a325-0d4e8f324467",
+            "ce018050-4cf2-4ca0-b3bc-bdfeb2ddece7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 25649,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

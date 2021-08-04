@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-03T10:50:50.179Z",
+    "end": "2021-08-03T10:50:57.781Z",
+    "duration": 7602,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a55ea183-3495-4330-82ae-5209de48d2e4",
+      "title": "",
+      "fullFile": "cypress/integration/com.techproed/day03_iframes.js",
+      "file": "cypress/integration/com.techproed/day03_iframes.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bc6ea9af-fa9d-4660-87b1-c4b7e160ee76",
+          "title": "iframes",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "handling iframes",
+              "fullTitle": "iframes handling iframes",
+              "timedOut": null,
+              "duration": 4876,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "/*iframes:\nframes are pages within a page\nthere are multiple html tag in a single page\n  1.install plugin : \n LINK: https://www.npmjs.com/package/cypress-iframe\n RUN ON TERMINAL : npm install -D cypress-iframe  \n   (package.json da otomatik olarak gozukur,in selenium we do it manually as we remember)\n    2. IMPORT PACKAGE IN THE CLASS : import 'cypress-iframe';\nWE CAN USE import 'cypress-iframe'; INSIDE THE commands.js   ===> and it is visible from entire framework , we do not need to import over and over in a class\n  3. cy.frameLoaded('CSS OF THE FRAME');\n  4. Once we are inside the the frame, we need to use below sysntax to find element\ncy.iframe().find('CSS OF ELEMENT')\n  */\ncy.visit('https://the-internet.herokuapp.com/iframe'); //ASSERTING THE TEXT\ncy.get('h3').should('contain.text', 'Editor');\ncy.frameLoaded('#mce_0_ifr'); //SWITCHING TO THE FRAME ELEMENT IN CYPRESS\n//driver.switchTo.frame(mce_0_ifr) IN SELENIUM\n//#mce_0_ifr css locator of the frame\ncy.iframe() //We need to use iframe() when we are inside the iframes\n.find('p') //use find() to locate the element inside the frame\n.clear; //clearing the element\n//WORKING OUTSIDE THE FRAME\n//Cypress automatically handles the element outside of the frame\ncy.get('h3').should('contain.text', 'Editor');\ncy.contains('Elemental Selenium').click();",
+              "err": {},
+              "uuid": "e3efe37e-294d-4159-ad51-059f8b1163e7",
+              "parentUUID": "bc6ea9af-fa9d-4660-87b1-c4b7e160ee76",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e3efe37e-294d-4159-ad51-059f8b1163e7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4876,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

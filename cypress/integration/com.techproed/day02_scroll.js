@@ -13,6 +13,7 @@ describe('scroll',()=>{
 
 
         //Scrolling down to 'Our Rooms' element
+        //scrollIntoView() ******************************* this is useful
         cy
         .get('.col-md-7 > .mb-4')
         .scrollIntoView();
@@ -32,7 +33,7 @@ describe('scroll',()=>{
         .scrollIntoView()
 
 
-        // scrollTo(x, y)
+        // scrollTo(x, y)***************************
         cy.wait(2000)
         cy
         .scrollTo(0, 1000)//scrolling 1000 px down

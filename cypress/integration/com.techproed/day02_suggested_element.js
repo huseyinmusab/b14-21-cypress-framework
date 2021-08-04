@@ -1,6 +1,6 @@
 describe('suggested elements',()=>{
 
-    it.skip('suggested elements',()=>{
+    it.only('suggested elements',()=>{
 
         //cy.get (".gLFyf").type('USA')
         cy.visit("https://www.google.com/")
@@ -27,6 +27,8 @@ describe('suggested elements',()=>{
         cy.visit("http://automationpractice.com/index.php")
         cy.get("input[id='search_query_top']").type('dress')
         cy.wait(5000)
+
+        //**without writing dress you can not find .ac_results */
 
         // METHOD 1 is locate the one of the suggested option (cypress)
         //Then click on it

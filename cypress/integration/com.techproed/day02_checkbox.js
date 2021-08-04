@@ -1,3 +1,5 @@
+///<reference types="cypress"  />
+
 describe('checkboxes',()=>{
 
      /* checkbox
@@ -6,16 +8,20 @@ https://docs.cypress.io/api/commands/check#Syntax
 
 
 it('checking single box',()=>{
+    
 
        //go to http://automationpractice.com/index.php
         //click on WOMEN
         //check the first checkbox
         cy.visit('http://automationpractice.com/index.php')
 
+        
+
         cy
         .get('.sf-with-ul')//returning 4 elements
         .first()//selecting on the first element
         .click()//clicking on the first one
+        
 
 
         //verify the checkbox is not checked by default
@@ -125,6 +131,8 @@ it('check all checkboxes',()=>{
        //should('have.id','username')//asserting if id = 'username'
        //should('have.type','text')//asserting if type='text'
        //should('have.class','container')//asserting if class='container'
+
+       
 
  })
 
